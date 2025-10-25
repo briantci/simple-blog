@@ -52,8 +52,8 @@
     }
 
     function getArticleById($id_article = null){
-       if(file_exists(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+       if(file_exists(DB_ARTICLES)) {
+            $contenu_json = file_get_contents(DB_ARTICLES);
             $_articles    = json_decode($contenu_json, true);
 
             foreach($_articles as $article){
