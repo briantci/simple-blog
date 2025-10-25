@@ -1,4 +1,7 @@
-<?php includ 'inc/inc.functions.php'; ?>
+<?php 
+// Inclusion du fichier des fonctions principales
+include 'inc/inc.functions.php'; 
+?>
 <!DOCTYPE HTML>
 <!--
 	Story by HTML5 UP
@@ -10,21 +13,28 @@
 		<title>Story by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<?php include 'inc/inc.css.php'; ?>
+		<?php 
+		// Inclusion des styles css
+		include 'inc/inc.css.php'; ?>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 				<?php 
-					getPagesTemplate(
-						array_key_exist('page', $_GET) ? $_GET['page'] : null
+				// Chargement du template de la page demandée
+					getPageTemplate(
+						array_key_exists('page', $_GET) ? $_GET['page'] : null
 					); 
 				?>
-				<?php include 'inc/tpls-footer.php'; ?>
+				<?php
+				// Inclusion du pied de la page
+				 include 'inc/tpl-footer.php'; ?>
 			</div>
 
-		<?php includes 'inc/inc.js.php'; ?>
+		<?php 
+		// Inclusion des scripts JS
+		include 'inc/inc.js.php'; ?>
 
 	</body>
 </html>
