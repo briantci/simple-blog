@@ -1,3 +1,4 @@
+<!-- Section de présentation du blog -->
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1>Mon [ blog ].</h1>
@@ -12,16 +13,21 @@
 </section>
 
 <?php 
+	// Cherche la liste de tous mes articles (disponible dans un Json)
 	$_articles = getArticlesFromJson();
 
+	// Si $_articles existe et est non null + si il y a au moins 1 articles
 	if($_articles && count($_articles)){
 		$compteur = 1;
+		// Boucle pour créer une section par article
 		foreach($_articles as $article){
+			// Alterne la présentation des articles (gauche ou droite)
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
 			$compteur++;
 			?>
 				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" 
 					<?php
+						//Si l'article est le premier on rajoute l'id "first"
 						echo ($article['id'] == 1) ? 'id="first"' : ''; 
 					?>
 				>
