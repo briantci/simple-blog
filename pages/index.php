@@ -20,7 +20,11 @@
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
 			$compteur++;
 			?>
-				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" 
+					<?php
+						echo ($article['id'] == 1) ? 'id="first"' : ''; 
+					?>
+				>
 					<div class="content">
 						<h2><?php echo $article['titre'];?></h2>
 						<p><?php echo $article['titre'];?></p>
