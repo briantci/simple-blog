@@ -43,8 +43,8 @@
     }
 
     function getArticlesFromJson(){
-        if(file_exists(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+        if(file_exists(DB_ARTICLES)) {
+            $contenu_json = file_get_contents(DB_ARTICLES);
             return json_decode($contenu_json, true);
         }
 
