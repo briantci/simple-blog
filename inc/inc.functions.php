@@ -51,7 +51,7 @@
         return null;
     }
 
-    function getArticleById($id_article == null){
+    function getArticleById($id_article = null){
        if(file_exists(DB_ARTICLE)) {
             $contenu_json = file_get_contents(DB_ARTICLE);
             $_articles    = json_decode($contenu_json, true);
