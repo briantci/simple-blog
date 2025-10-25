@@ -25,7 +25,7 @@
 		</ul>
 	</div>
 	<div class="image">
-		<img src="<?php echo $art['image'];?>" alt="" />
+		<img src="<?php echo $article['image'];?>" alt="" />
 	</div>
 </section>
 <?php endif; ?>
