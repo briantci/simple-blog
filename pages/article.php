@@ -1,11 +1,14 @@
 <?php
+	// Inclusion du fichier des fonctions
 	require_once __DIR__ . '/../inc/inc.functions.php';
 
+	// Récupération de l'article via l'ID passé dans l'URL
 	$article = getArticleById(
 		array_key_exists('id', $_GET) ? $_GET['id'] : null
 	);
 ?>
 <?php if(is_null($article) OR empty($article)): ?>
+<!-- Message d'erreur si l'article n'existe pas -->
 <section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1>Article introuvable</h1>
@@ -16,6 +19,7 @@
 	</div>
 </section>
 <?php else: ?>
+<!-- Affichage de l'article si trouvé -->
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1><?php echo $article['titre'];?></h1>
