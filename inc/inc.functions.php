@@ -4,7 +4,7 @@
     define('TL_ROOT', dirname(__DIR__));
     define('LOGIN', 'UEL311');
     define('PASSWORD', 'U31311');
-    define('DB_ARTICLES', TL_ROOT.'/dbal/articles.json');
+    define('DB_ARTICLES', TL_ROOT.'/db/articles.json');
 
     function connectUser($login = null, $password = null){
         if(!is_null($login) && !is_null($password)){
