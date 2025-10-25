@@ -43,6 +43,7 @@
     }
 
     function getArticlesFromJson(){
+        //DB_ARTICLES pointe vers le fichier JSON qui contient ma liste d'articles.
         if(file_exists(DB_ARTICLES)) {
             $contenu_json = file_get_contents(DB_ARTICLES);
             return json_decode($contenu_json, true);
