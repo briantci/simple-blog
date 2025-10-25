@@ -36,7 +36,7 @@
         $fichier = TL_ROOT.'/pages/'.(is_null($page) ? 'index.php' : $page.'.php');
 
         if(!file_exists($fichier)){
-            inclde TL_ROOT.'/pages/index.php';
+            include TL_ROOT.'/pages/index.php';
         }else{
             include $fichier;
         }
