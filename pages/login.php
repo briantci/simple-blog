@@ -45,7 +45,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $user = connectUser($login, $password);
 
         // ---------------------------------------------------------------------
-        // 🟢 Vérification du résultat de l’authentification
+        // Vérification du résultat de l’authentification
         // ---------------------------------------------------------------------
         if ($user !== null) {
             // Stocke les informations de l’utilisateur dans la session
