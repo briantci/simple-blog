@@ -3,7 +3,7 @@
 // Initialisation de la session et configuration de base
 // -----------------------------------------------------------------------------
 declare(strict_types=1);
-session_start(); // Démarrage de la session avant toute utilisation de $_SESSION
+//session_start(); // Démarrage de la session avant toute utilisation de $_SESSION
 
 // (Optionnel en développement) : activer l’affichage complet des erreurs
 // error_reporting(E_ALL);
